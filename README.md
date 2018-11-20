@@ -1,4 +1,4 @@
-# FloCode
+# FlowCode
 
 utilities to convert from .flo format (optical flow) to .exr format
 
@@ -16,8 +16,8 @@ utilities to convert from .flo format (optical flow) to .exr format
 
 Compile :
 
-    git clone --recursive https://github.com/lulu1315/FloCode.git
-    cd FloCode
+    git clone --recursive https://github.com/lulu1315/FlowCode.git
+    cd FlowCode
     mkdir build;cd build
     cmake ..
     make
