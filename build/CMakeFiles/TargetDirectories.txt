@@ -1,0 +1,6 @@
+/shared/foss/FloCode_v1/build/CMakeFiles/rebuild_cache.dir
+/shared/foss/FloCode_v1/build/CMakeFiles/edit_cache.dir
+/shared/foss/FloCode_v1/build/CMakeFiles/imagelib.dir
+/shared/foss/FloCode_v1/build/CMakeFiles/exr2flo.dir
+/shared/foss/FloCode_v1/build/CMakeFiles/flo2exr.dir
+/shared/foss/FloCode_v1/build/CMakeFiles/flo2png.dir
