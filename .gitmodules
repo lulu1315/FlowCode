@@ -1,0 +1,6 @@
+[submodule "imageLib"]
+	path = imageLib
+	url = https://github.com/dscharstein/imageLib.git
+[submodule "tinyexr"]
+	path = tinyexr
+	url = https://github.com/syoyo/tinyexr.git
