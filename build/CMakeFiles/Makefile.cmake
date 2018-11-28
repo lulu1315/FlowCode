@@ -23,16 +23,17 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.12/Modules/Compiler/GNU-C.cmake"
   "/usr/local/share/cmake-3.12/Modules/Compiler/GNU-CXX.cmake"
   "/usr/local/share/cmake-3.12/Modules/Compiler/GNU.cmake"
-  "/usr/local/share/cmake-3.12/Modules/FindPNG.cmake"
   "/usr/local/share/cmake-3.12/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/local/share/cmake-3.12/Modules/FindPackageMessage.cmake"
-  "/usr/local/share/cmake-3.12/Modules/FindZLIB.cmake"
   "/usr/local/share/cmake-3.12/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/local/share/cmake-3.12/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/local/share/cmake-3.12/Modules/Platform/Linux-GNU.cmake"
   "/usr/local/share/cmake-3.12/Modules/Platform/Linux.cmake"
   "/usr/local/share/cmake-3.12/Modules/Platform/UnixPaths.cmake"
-  "/usr/local/share/cmake-3.12/Modules/SelectLibraryConfigurations.cmake"
+  "/usr/share/OpenCV/OpenCVConfig-version.cmake"
+  "/usr/share/OpenCV/OpenCVConfig.cmake"
+  "/usr/share/OpenCV/OpenCVModules-release.cmake"
+  "/usr/share/OpenCV/OpenCVModules.cmake"
   )
 
 # The corresponding makefile is:
@@ -48,6 +49,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/deepflow_opencv.dir/DependInfo.cmake"
   "CMakeFiles/imagelib.dir/DependInfo.cmake"
   "CMakeFiles/exr2flo.dir/DependInfo.cmake"
   "CMakeFiles/flo2exr.dir/DependInfo.cmake"

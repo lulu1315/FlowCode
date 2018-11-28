@@ -1,7 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/flo2exr.dir/flo2exr.cpp.o"
-  "CMakeFiles/flo2exr.dir/tinyexr/tinyexr.cc.o"
-  "CMakeFiles/flo2exr.dir/flowIO.cpp.o"
   "flo2exr.pdb"
   "flo2exr"
 )

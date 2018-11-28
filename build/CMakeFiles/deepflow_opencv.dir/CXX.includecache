@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/shared/foss/FlowCode/exr2flo.cpp
+/shared/foss/FlowCode/deepflow_opencv.cpp
 opencv2/highgui.hpp
 /shared/foss/FlowCode/opencv2/highgui.hpp
 opencv2/video.hpp

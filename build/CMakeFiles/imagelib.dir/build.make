@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /shared/foss/FloCode_v1
+CMAKE_SOURCE_DIR = /shared/foss/FlowCode
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /shared/foss/FloCode_v1/build
+CMAKE_BINARY_DIR = /shared/foss/FlowCode/build
 
 # Utility rule file for imagelib.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /shared/foss/FloCode_v1/build
 include CMakeFiles/imagelib.dir/progress.make
 
 CMakeFiles/imagelib:
-	cd /shared/foss/FloCode_v1/imageLib && make
+	cd /shared/foss/FlowCode/imageLib && make
 
 imagelib: CMakeFiles/imagelib
 imagelib: CMakeFiles/imagelib.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/imagelib.dir/clean:
 .PHONY : CMakeFiles/imagelib.dir/clean
 
 CMakeFiles/imagelib.dir/depend:
-	cd /shared/foss/FloCode_v1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /shared/foss/FloCode_v1 /shared/foss/FloCode_v1 /shared/foss/FloCode_v1/build /shared/foss/FloCode_v1/build /shared/foss/FloCode_v1/build/CMakeFiles/imagelib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /shared/foss/FlowCode/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /shared/foss/FlowCode /shared/foss/FlowCode /shared/foss/FlowCode/build /shared/foss/FlowCode/build /shared/foss/FlowCode/build/CMakeFiles/imagelib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/imagelib.dir/depend
 

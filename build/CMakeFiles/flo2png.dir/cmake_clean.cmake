@@ -1,7 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/flo2png.dir/color_flow.cpp.o"
-  "CMakeFiles/flo2png.dir/flowIO.cpp.o"
-  "CMakeFiles/flo2png.dir/colorcode.cpp.o"
+  "CMakeFiles/flo2png.dir/flo2png.cpp.o"
   "flo2png.pdb"
   "flo2png"
 )

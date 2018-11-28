@@ -1,7 +1,7 @@
 #include "opencv2/highgui.hpp"
 #include "opencv2/video.hpp"
-#include "opencv2/optflow.hpp"
 #include "opencv2/core/ocl.hpp"
+#include "opencv2/optflow.hpp"
 #include <fstream>
 #include <limits>
 
@@ -10,8 +10,8 @@ using namespace cv;
 using namespace optflow;
 
 const String keys = "{help h usage ? |      | print this message   }"
-        "{@input        |      | image1.exr}"
-        "{@output       |      | image2.flo}";
+        "{@image1        |      | image1.flo}"
+        "{@image2        |      | image2.png}";
         
 static Mat flowToDisplay(const Mat flow)
 {
@@ -20,7 +20,7 @@ static Mat flowToDisplay(const Mat flow)
     Mat hsv_split[3], hsv, rgb;
     split(flow, flow_split);
     cartToPolar(flow_split[0], flow_split[1], magnitude, angle, true);
-    normalize(magnitude, magnitude, 0, 1, NORM_MINMAX);
+    normalize(magnitude, magnitude, 0, 255, NORM_MINMAX);
     hsv_split[0] = angle; // already in degrees - no normalization needed
     hsv_split[1] = Mat::ones(angle.size(), angle.type());
     hsv_split[2] = magnitude;
@@ -42,55 +42,45 @@ static Mat flowTo3Channels(const Mat flow)
     return rgb;
 }
 
-static Mat exrTo2Channels(const Mat ima)
-{
-    Mat ima_split[4];
-    Mat flow = Mat::zeros(ima.size(), CV_32FC2);
-    split(ima, ima_split);
-    vector<Mat> channels;
-    channels.push_back(ima_split[2]);
-    channels.push_back(ima_split[1]);
-    merge(channels,flow);
-    return flow;
-}
-
-
 int main( int argc, char** argv )
 {
     CommandLineParser parser(argc, argv, keys);
-    parser.about("convert .exr file to .flo");
+    parser.about("convert .flo file to .png in colorcode");
     if ( parser.has("help") || argc < 2 )
     {
         parser.printMessage();
         printf("EXAMPLES:\n");
-        printf("./exr2flo in.exr out.flo\n");
+        printf("./flo2exr in.flo out.png\n");
         return 0;
     }
     
     String inputfile = parser.get<String>(0);
     String outputfile = parser.get<String>(1);
-    
+
     if ( !parser.check() )
     {
         parser.printErrors();
         return 0;
     }
     
-    Mat i1;
     Mat_<Point2f> flow;
-    i1 = imread(inputfile, -1); //unchanged
+    flow = optflow::readOpticalFlow(inputfile);
     
-    if ( !i1.data )
+    if ( !flow.data )
     {
-        printf("No exr image data \n");
+        printf("No flow data \n");
         return -1;
     }
+       
+    //Mat flow_image = flowToDisplay(flow);
+    //namedWindow( "Computed flow", WINDOW_AUTOSIZE );
+    //imshow( "Computed flow", flow_image );
+    //waitKey(0);
     
-//    flow = Mat(i1.size[0], i1.size[1], CV_32FC2);
-
-    //write result as .flow
-    flow = exrTo2Channels(i1);
-    optflow::writeOpticalFlow(outputfile,flow);
-    printf("writing flo file : %s\n",outputfile.c_str());
+    //write result as .png
+    Mat colorflow = flowToDisplay(flow);
+    //cv::cvtColor(flow_3chan, flow_3chan, CV_BGR2RGB);
+    cv::imwrite(outputfile, colorflow);
+    printf("writing png file : %s\n",outputfile.c_str());
     
 }
