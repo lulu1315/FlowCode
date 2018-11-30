@@ -49,6 +49,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/deepflow_consistency.dir/DependInfo.cmake"
   "CMakeFiles/deepflow_opencv.dir/DependInfo.cmake"
   "CMakeFiles/imagelib.dir/DependInfo.cmake"
   "CMakeFiles/exr2flo.dir/DependInfo.cmake"

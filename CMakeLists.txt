@@ -29,10 +29,15 @@ ADD_EXECUTABLE(deepflow_opencv
 "${CMAKE_SOURCE_DIR}/deepflow_opencv.cpp" 
 )
 
+ADD_EXECUTABLE(deepflow_consistency
+"${CMAKE_SOURCE_DIR}/deepflow_consistency.cpp" 
+)
+
 TARGET_LINK_LIBRARIES(exr2flo ${OpenCV_LIBS})
 TARGET_LINK_LIBRARIES(flo2exr ${OpenCV_LIBS})
 TARGET_LINK_LIBRARIES(flo2png ${OpenCV_LIBS})
 TARGET_LINK_LIBRARIES(deepflow_opencv ${OpenCV_LIBS})
+TARGET_LINK_LIBRARIES(deepflow_consistency ${OpenCV_LIBS})
 
 #add_dependencies(exr2flo imagelib)
 #add_dependencies(flo2exr imagelib)

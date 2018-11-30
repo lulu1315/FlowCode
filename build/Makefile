@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named deepflow_consistency
+
+# Build rule for target.
+deepflow_consistency: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 deepflow_consistency
+.PHONY : deepflow_consistency
+
+# fast build rule for target.
+deepflow_consistency/fast:
+	$(MAKE) -f CMakeFiles/deepflow_consistency.dir/build.make CMakeFiles/deepflow_consistency.dir/build
+.PHONY : deepflow_consistency/fast
+
+#=============================================================================
 # Target rules for targets named deepflow_opencv
 
 # Build rule for target.
@@ -174,6 +187,33 @@ flo2png: cmake_check_build_system
 flo2png/fast:
 	$(MAKE) -f CMakeFiles/flo2png.dir/build.make CMakeFiles/flo2png.dir/build
 .PHONY : flo2png/fast
+
+deepflow_consistency.o: deepflow_consistency.cpp.o
+
+.PHONY : deepflow_consistency.o
+
+# target to build an object file
+deepflow_consistency.cpp.o:
+	$(MAKE) -f CMakeFiles/deepflow_consistency.dir/build.make CMakeFiles/deepflow_consistency.dir/deepflow_consistency.cpp.o
+.PHONY : deepflow_consistency.cpp.o
+
+deepflow_consistency.i: deepflow_consistency.cpp.i
+
+.PHONY : deepflow_consistency.i
+
+# target to preprocess a source file
+deepflow_consistency.cpp.i:
+	$(MAKE) -f CMakeFiles/deepflow_consistency.dir/build.make CMakeFiles/deepflow_consistency.dir/deepflow_consistency.cpp.i
+.PHONY : deepflow_consistency.cpp.i
+
+deepflow_consistency.s: deepflow_consistency.cpp.s
+
+.PHONY : deepflow_consistency.s
+
+# target to generate assembly for a file
+deepflow_consistency.cpp.s:
+	$(MAKE) -f CMakeFiles/deepflow_consistency.dir/build.make CMakeFiles/deepflow_consistency.dir/deepflow_consistency.cpp.s
+.PHONY : deepflow_consistency.cpp.s
 
 deepflow_opencv.o: deepflow_opencv.cpp.o
 
@@ -290,12 +330,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... deepflow_consistency"
 	@echo "... deepflow_opencv"
 	@echo "... edit_cache"
 	@echo "... imagelib"
 	@echo "... exr2flo"
 	@echo "... flo2exr"
 	@echo "... flo2png"
+	@echo "... deepflow_consistency.o"
+	@echo "... deepflow_consistency.i"
+	@echo "... deepflow_consistency.s"
 	@echo "... deepflow_opencv.o"
 	@echo "... deepflow_opencv.i"
 	@echo "... deepflow_opencv.s"
