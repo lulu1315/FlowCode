@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/shared/foss-18/FlowCode/simpleflow_opencv.cpp
+opencv2/optflow.hpp
+/shared/foss-18/FlowCode/opencv2/optflow.hpp
+opencv2/core/utility.hpp
+-
+opencv2/imgproc.hpp
+/shared/foss-18/FlowCode/opencv2/imgproc.hpp
+opencv2/imgcodecs.hpp
+/shared/foss-18/FlowCode/opencv2/imgcodecs.hpp
+opencv2/highgui.hpp
+/shared/foss-18/FlowCode/opencv2/highgui.hpp
+cstdio
+-
+iostream
+-
+

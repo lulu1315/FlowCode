@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/shared/foss/FlowCode/exr2flo.cpp
+/shared/foss-18/FlowCode/exr2flo.cpp
 opencv2/highgui.hpp
-/shared/foss/FlowCode/opencv2/highgui.hpp
+/shared/foss-18/FlowCode/opencv2/highgui.hpp
 opencv2/video.hpp
-/shared/foss/FlowCode/opencv2/video.hpp
+/shared/foss-18/FlowCode/opencv2/video.hpp
 opencv2/optflow.hpp
-/shared/foss/FlowCode/opencv2/optflow.hpp
+/shared/foss-18/FlowCode/opencv2/optflow.hpp
 opencv2/core/ocl.hpp
-/shared/foss/FlowCode/opencv2/core/ocl.hpp
+/shared/foss-18/FlowCode/opencv2/core/ocl.hpp
 fstream
 -
 limits
