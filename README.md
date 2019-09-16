@@ -14,8 +14,17 @@ utilities to convert from .flo format (optical flow) to .exr format
 
     `usage: ./flo2png [-quiet] in.flo out.png [maxmotion]` 
 
+* deepflow_opencv : compute flow field between im1 and im2 with opencv deepflow method
+
+    `usage: ./deepflow_opencv im1.png im2.png out.flo` 
+     ` ./deepflow_opencv --gpu im1.png im2.png out.flo` 
+     ` ./deepflow_opencv --exr --gpu im1.png im2.png out.exr` 
+     ` use -d to downsample the flow computation (-d=.5 will compute at half resolution)` 
+        
 Compile :
 
+    you need to have opencv installed
+    
     git clone --recursive https://github.com/lulu1315/FlowCode.git
     cd FlowCode
     mkdir build;cd build
