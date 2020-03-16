@@ -1,4 +1,5 @@
 /shared/foss-18/FlowCode/build/CMakeFiles/rebuild_cache.dir
+/shared/foss-18/FlowCode/build/CMakeFiles/showflow.dir
 /shared/foss-18/FlowCode/build/CMakeFiles/exr2flo.dir
 /shared/foss-18/FlowCode/build/CMakeFiles/edit_cache.dir
 /shared/foss-18/FlowCode/build/CMakeFiles/imagelib.dir

@@ -37,12 +37,17 @@ ADD_EXECUTABLE(simpleflow_opencv
 "${CMAKE_SOURCE_DIR}/simpleflow_opencv.cpp" 
 )
 
+ADD_EXECUTABLE(showflow
+"${CMAKE_SOURCE_DIR}/showflow.cpp" 
+)
+
 TARGET_LINK_LIBRARIES(exr2flo ${OpenCV_LIBS})
 TARGET_LINK_LIBRARIES(flo2exr ${OpenCV_LIBS})
 TARGET_LINK_LIBRARIES(flo2png ${OpenCV_LIBS})
 TARGET_LINK_LIBRARIES(deepflow_opencv ${OpenCV_LIBS})
 TARGET_LINK_LIBRARIES(deepflow_consistency ${OpenCV_LIBS})
 TARGET_LINK_LIBRARIES(simpleflow_opencv ${OpenCV_LIBS})
+TARGET_LINK_LIBRARIES(showflow ${OpenCV_LIBS})
 
 #add_dependencies(exr2flo imagelib)
 #add_dependencies(flo2exr imagelib)

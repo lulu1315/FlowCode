@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named showflow
+
+# Build rule for target.
+showflow: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 showflow
+.PHONY : showflow
+
+# fast build rule for target.
+showflow/fast:
+	$(MAKE) -f CMakeFiles/showflow.dir/build.make CMakeFiles/showflow.dir/build
+.PHONY : showflow/fast
+
+#=============================================================================
 # Target rules for targets named exr2flo
 
 # Build rule for target.
@@ -336,6 +349,33 @@ flo2png.cpp.s:
 	$(MAKE) -f CMakeFiles/flo2png.dir/build.make CMakeFiles/flo2png.dir/flo2png.cpp.s
 .PHONY : flo2png.cpp.s
 
+showflow.o: showflow.cpp.o
+
+.PHONY : showflow.o
+
+# target to build an object file
+showflow.cpp.o:
+	$(MAKE) -f CMakeFiles/showflow.dir/build.make CMakeFiles/showflow.dir/showflow.cpp.o
+.PHONY : showflow.cpp.o
+
+showflow.i: showflow.cpp.i
+
+.PHONY : showflow.i
+
+# target to preprocess a source file
+showflow.cpp.i:
+	$(MAKE) -f CMakeFiles/showflow.dir/build.make CMakeFiles/showflow.dir/showflow.cpp.i
+.PHONY : showflow.cpp.i
+
+showflow.s: showflow.cpp.s
+
+.PHONY : showflow.s
+
+# target to generate assembly for a file
+showflow.cpp.s:
+	$(MAKE) -f CMakeFiles/showflow.dir/build.make CMakeFiles/showflow.dir/showflow.cpp.s
+.PHONY : showflow.cpp.s
+
 simpleflow_opencv.o: simpleflow_opencv.cpp.o
 
 .PHONY : simpleflow_opencv.o
@@ -370,6 +410,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... showflow"
 	@echo "... exr2flo"
 	@echo "... edit_cache"
 	@echo "... imagelib"
@@ -393,6 +434,9 @@ help:
 	@echo "... flo2png.o"
 	@echo "... flo2png.i"
 	@echo "... flo2png.s"
+	@echo "... showflow.o"
+	@echo "... showflow.i"
+	@echo "... showflow.s"
 	@echo "... simpleflow_opencv.o"
 	@echo "... simpleflow_opencv.i"
 	@echo "... simpleflow_opencv.s"
